@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import { FaTrash, FaCheck } from 'react-icons/fa';
 import './TodoList.css';
 
 const TodoList = () => {
     // Hook UseState para manejar la lista de tareas
-    const [tasks, setTasks] = useState([
-        { id: 1, text: 'Aprender React' },
-        { id: 2, text: 'Construir una App' },
-        { id: 3, text: 'Modularizar componentes' }
-    ]);
+  const [tasks, setTasks] = useState([
+    { id: 1, text: 'Aprender React', completed: false },
+    { id: 2, text: 'Construir una App', completed: false },
+    { id: 3, text: 'Modularizar componentes', completed: false }
+  ]);
 
     const [inputValue, setInputValue] = useState('');
 
@@ -16,10 +17,11 @@ const TodoList = () => {
         e.preventDefault();
         if(inputValue.trim() === '') return; // Evitar añadir tareas vacías
 
-        const newTask = {
-            id: Date.now(),
-            text: inputValue
-        };
+    const newTask = {
+      id: Date.now(),
+      text: inputValue,
+      completed: false
+    };
 
         setTasks([...tasks, newTask]); // Añadir la nueva tarea a la lista
         setInputValue('');
@@ -29,6 +31,13 @@ const TodoList = () => {
     const handleDeleteTask = (id) => {
         setTasks(tasks.filter(task => task.id !== id));
     };
+
+    // función para tachar una tarea como completada (opcional)
+    const handleToggleComplete = (id) => {
+        setTasks(tasks.map(task => 
+            task.id === id ? { ...task, completed: !task.completed } : task 
+        ));
+    }
 
     return(
         <div className="todo-list-container">
@@ -46,11 +55,29 @@ const TodoList = () => {
         </form>
 
       {/* 2. Aquí mostraremos la lista de tareas */}
-      <ul>
+      <ul className="tasks-list">
         {tasks.map(task => (
-          <li key={task.id}>
-            {task.text}
-            <button onClick={() => handleDeleteTask(task.id)}>Eliminar</button>
+          <li
+            key={task.id}
+            className= "todo-list-li-style"
+          >
+            <span className={`task-text ${task.completed ? 'completed' : ''}`}>{task.text}</span>
+            <div>
+            <button
+              className="delete-button"
+              onClick={() => handleDeleteTask(task.id)}
+              aria-label={`Eliminar tarea ${task.text}`}
+            >
+              <FaTrash />
+            </button>
+            <button
+              className={`complete-button ${task.completed ? 'done' : 'completada'}`}
+              onClick={() => handleToggleComplete(task.id)}
+              aria-label={task.completed ? `Marcar tarea ${task.text} como no completada` : `Marcar tarea ${task.text} como completada`}
+            >
+              <FaCheck />
+            </button>
+            </div>
           </li>
         ))}
       </ul>

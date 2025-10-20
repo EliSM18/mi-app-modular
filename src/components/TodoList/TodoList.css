@@ -39,3 +39,40 @@
   background-color: #fff;
   border-bottom: 1px solid #eee;
 }
+
+.todo-list-li-style {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.complete-button {
+  background-color: #28dd4ff6;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.completada {
+    text-decoration: line-through;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.complete-button.done {
+  background-color: #218838; /* verde para completado */
+}
