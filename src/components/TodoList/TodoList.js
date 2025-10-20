@@ -64,18 +64,18 @@ const TodoList = () => {
             <span className={`task-text ${task.completed ? 'completed' : ''}`}>{task.text}</span>
             <div>
             <button
-              className="delete-button"
-              onClick={() => handleDeleteTask(task.id)}
-              aria-label={`Eliminar tarea ${task.text}`}
-            >
-              <FaTrash />
-            </button>
-            <button
               className={`complete-button ${task.completed ? 'done' : 'completada'}`}
               onClick={() => handleToggleComplete(task.id)}
               aria-label={task.completed ? `Marcar tarea ${task.text} como no completada` : `Marcar tarea ${task.text} como completada`}
             >
               <FaCheck />
+            </button>
+            <button
+              className="delete-button"
+              onClick={() => handleDeleteTask(task.id)}
+              aria-label={`Eliminar tarea ${task.text}`}
+            >
+              <FaTrash />
             </button>
             </div>
           </li>
