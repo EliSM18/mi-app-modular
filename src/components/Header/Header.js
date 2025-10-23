@@ -1,18 +1,24 @@
 import React from "react";
 import './Header.css';
 import logo from './chococat-Photoroom.png';
-import ThemeSwitcher from "../ThemeSwitcher";
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-    return (
-        <header className="app-header">
-            <div align="right">
-                <ThemeSwitcher />
-            </div>
-            <img src={logo} className="app-logo" alt="logo" style={{ width: 150, height: 150 }}/>
-            <h1>Mi Aplicación Modular</h1>
-        </header>
-    );
+  return (
+    <header className="app-header">
+      <div className="logo-nav">
+        <h1 className="logo">Mi App</h1>
+        <nav>
+          {/* Usamos <Link> en lugar de <a href=""> */}
+          <Link to="/">Inicio</Link>
+          <Link to="/tareas">Tareas</Link>
+          <Link to="/directorio">Directorio</Link>
+        </nav>
+      </div>
+      <ThemeSwitcher />
+    </header>
+  );
 };
 
 export default Header;
