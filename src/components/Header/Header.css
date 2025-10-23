@@ -4,7 +4,7 @@
     color: white;
     text-align: center;
     display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -26,6 +26,7 @@ nav {
 
 nav a { /* <Link> se renderiza como una <a>, así que podemos estilizarla */
   color: white;
+  align-items: center;
   text-decoration: none;
   font-weight: bold;
   padding: 5px 0;

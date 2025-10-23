@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import ThemeContext from './context/ThemeContext';
+import Error404 from './components/Errors/Error404';
 
 // Importar el Layout y las Páginas
 import Layout from './components/Layout/Layout';
@@ -27,7 +28,7 @@ function App() {
           <Route path="directorio" element={<UserDirectory />} />
 
           {/* Ruta "Catch-all" para 404 (No encontrado) */}
-          <Route path="*" element={<h2>Página no encontrada</h2>} />
+          <Route path="*" element={<Error404/>} />
         </Route>
       </Routes>
     </div>

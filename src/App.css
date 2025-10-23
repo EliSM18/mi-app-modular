@@ -61,6 +61,17 @@
   color: #f1f1f1;
 }
 
+/* Asegurar fondo global aplicando la clase al body */
+body.light {
+  background-color: #ffffff;
+  color: #282c34;
+}
+
+body.dark {
+  background-color: #282c34;
+  color: #ffffff;
+}
+
 .theme-switcher {
   padding: 10px 15px;
   margin: 10px;
