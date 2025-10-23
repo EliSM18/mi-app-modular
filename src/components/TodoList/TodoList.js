@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { FaTrash, FaCheck } from 'react-icons/fa';
+//import { FaTrash, FaCheck } from 'react-icons/fa';
+import TodoItem from "../TodoItem/TodoItem";
 import './TodoList.css';
 
 const TodoList = () => {
@@ -57,6 +58,14 @@ const TodoList = () => {
       {/* 2. Aquí mostraremos la lista de tareas */}
       <ul className="tasks-list">
         {tasks.map(task => (
+          <TodoItem
+            key={task.id}
+            task={task}
+            handleToggleComplete={handleToggleComplete}
+            handleDeleteTask={handleDeleteTask}
+          />
+        ))}
+        {/* {tasks.map(task => (
           <li
             key={task.id}
             className= "todo-list-li-style"
@@ -79,9 +88,8 @@ const TodoList = () => {
             </button>
             </div>
           </li>
-        ))}
+        ))} */}
       </ul>
-
     </div>
     )
 }

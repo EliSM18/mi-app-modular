@@ -69,3 +69,13 @@
   border-radius: 4px;
   font-weight: bold;
 }
+
+.App.dark .todo-list-container {
+  background-color: #3a3f4b;
+  border-color: #555;
+}
+
+.App.dark .todo-list-container li {
+  background-color: #4a4f5b;
+  border-bottom: 1px solid #666;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import './Header.css';
 import logo from './chococat-Photoroom.png';
-import ThemeSwitcher from "../ThemeSwitcher";
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 
 const Header = () => {
     return (
