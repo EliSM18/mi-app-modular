@@ -73,6 +73,77 @@
   opacity: 0.7;
 }
 
+/* Estilos para los logs de eliminación */
+.deletion-logs {
+  margin-top: 26px;
+  padding: 14px;
+  background: transparent;
+}
+
+.deletion-logs h3 {
+  margin: 8px 0 12px;
+  font-size: 1.05rem;
+}
+
+.deletion-logs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.deletion-logs li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px dashed #eee;
+}
+
+.deletion-logs .log-text {
+  color: #333;
+}
+
+.deletion-logs .log-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin-left: 12px;
+}
+
+/* Estilos para los logs de completados */
+.completion-logs {
+  margin-top: 16px;
+  padding: 14px;
+}
+
+.completion-logs h3 {
+  margin: 8px 0 12px;
+  font-size: 1.05rem;
+}
+
+.completion-logs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.completion-logs li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-bottom: 1px dashed #eee;
+}
+
+.completion-logs .log-text {
+  color: #2a7a2a; /* color verde para completados */
+}
+
+.completion-logs .log-date {
+  color: #666;
+  font-size: 0.9rem;
+  margin-left: 12px;
+}
+
 .complete-button.done {
   background-color: #218838; /* verde para completado */
 }

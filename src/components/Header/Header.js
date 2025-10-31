@@ -1,15 +1,14 @@
 import React from "react";
 import './Header.css';
-import logo from './chococat-Photoroom.png';
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 import { Link } from 'react-router-dom';
-import IconApp from "../Icon/IconApp";
+import apache from './apache.svg';
 
 const Header = () => {
   return (
     <header className="app-header">
       <div className="logo-nav">
-        <h1 className="logo"><IconApp/></h1>
+        <h1 className="logo"><img src={apache} alt="logo" className="logo"></img></h1>
         <nav>
           {/* Usamos <Link> en lugar de <a href=""> */}
           <Link to="/">Inicio</Link>

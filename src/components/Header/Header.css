@@ -17,6 +17,8 @@
 .logo {
   margin: 0;
   font-size: 1.5em;
+  max-width: 60px;
+  max-height: min-content;
 }
 
 nav {
