@@ -2,7 +2,7 @@ import React from "react";
 import './Header.css';
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 import { Link } from 'react-router-dom';
-import apache from './apache.svg';
+import apache from './github-octocat.svg';
 
 const Header = () => {
   return (

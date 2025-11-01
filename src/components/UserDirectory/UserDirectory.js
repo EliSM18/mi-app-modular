@@ -38,6 +38,22 @@ const UserDirectory = () => {
         <div className="user-directory">
             <h2>Directorio de Usuarios</h2>
             {/*Contenido dinámico*/}
+            {/*Si está cargando muestra mensaje*/}
+            {loading && <p>Cargando usuarios...</p>}
+            {/*Si hay error, muestra el error*/}
+            {error && <p className="error-message">Error: {error}</p>}
+            {/*Si no hay error y no está cargando, muestra la lista de usuarios*/}
+            {!loading && !error && (
+                <ul className="user-list">
+                    {users.map(user => (
+                        <li key={user.id} className="user-card">
+                            <h3>{user.name}</h3>
+                            <p>📧 {user.email}</p>
+                            <p>🌐 {user.website}</p>
+                        </li>
+                    ))}
+                </ul>
+            )}
         </div>
     );
 };

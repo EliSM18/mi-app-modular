@@ -147,3 +147,34 @@
 .complete-button.done {
   background-color: #218838; /* verde para completado */
 }
+
+/* Estilos para temas oscuros*/
+body.dark .todo-list-container {
+  background-color: #707684;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .add-task-form input {
+  background-color: #555b66;
+  border: 1px solid #444c56;
+  color: #ffffff;
+}
+
+body.dark .add-task-form button {
+  background-color: #0069d9;
+}
+body.dark .todo-list-container li {
+  background-color: #555b66;
+  border-bottom: 1px solid #555b66;
+}
+
+body.dark .completion-logs .log-text,
+body.dark .deletion-logs .log-text {
+  color: #ffffff;
+}
+
+body.dark .deletion-logs .log-date,
+body.dark .completion-logs .log-date {
+  color: #cccccc;
+}
