@@ -21,4 +21,9 @@ describe('Header', () => {
     const { container } = renderWithTheme(<MockHeader />);
     expect(container).toBeInTheDocument();
   });
+
+  test('muestra el texto correcto', () => {
+    const { getByText } = renderWithTheme(<MockHeader />);
+    expect(getByText('Header Component')).toBeInTheDocument();
+  });
 });
